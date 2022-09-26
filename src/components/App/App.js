@@ -5,14 +5,21 @@ import { useState } from "react";
 function App() {
   const [likes, setLikes] = useState(0);
 
+  function addLikes() {
+    setLikes(likes + 1);
+  }
+  function addAnS() {
+    if (likes === 1) {
+      return "like";
+    } else {
+      return "likes";
+    }
+  }
+
   return (
     <div className="App">
-      <button
-        onClick={function addLikes() {
-          setLikes(likes + 1);
-        }}
-      >
-        {likes} likes
+      <button onClick={addLikes}>
+        {likes} {addAnS()}
       </button>
     </div>
   );
