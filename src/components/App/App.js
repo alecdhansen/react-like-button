@@ -11,6 +11,8 @@ function App() {
   function addAnS() {
     if (likes === 1) {
       return "like";
+    } else if (likes === 100) {
+      return "likes, get a life";
     } else {
       return "likes";
     }
